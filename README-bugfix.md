@@ -78,7 +78,7 @@ vi ./dist/static/chunks/app/\(products\)/sentio/page-0b750d4e81e7fc5b.js
 /sc = "HaruGreeter"    sc = "Kei"
 
 ## 4、语音输入框位置修正
-把docker容器awesome_digital_human-adh-web-1  中/workspace/dist/static/css/f8b2a301a9578d95.css文件拷贝到宿主机 /volume1/Download，方便我修改
+把docker容器awesome_digital_human-adh-web-1  中/workspace/dist/static/css/f8b2a301a9578d95.css文件拷贝到宿主机 /volume1/Download，方便修改
 
 docker cp awesome_digital_human-adh-web-1:/workspace/dist/static/css/f8b2a301a9578d95.css /volume1/Download
 
