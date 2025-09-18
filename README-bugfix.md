@@ -87,3 +87,6 @@ docker cp /volume1/Download/f8b2a301a9578d95.css awesome_digital_human-adh-web-1
 vscode编辑器加到最后
 
 .flex.flex-col.full-height-minus-64px {height: calc(100dvh - 84px) !important;padding-bottom: 0 !important;}.flex.flex-col.w-4\/5\.md\:w-2\/3\.2xl\:w-1\/2.items-start.z-10{position:fixed!important;left:50%!important;bottom:0!important;transform:translateX(-50%)!important;width:80%!important;max-width:768px!important;z-index:100!important;margin:0!important}
+
+## 有图有真相，最终效果：
+![修改完成后的最终效果](https://raw.githubusercontent.com/simplify123/awesome-digital-human-live2d/refs/heads/main/%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C.webp)
