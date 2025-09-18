@@ -65,6 +65,7 @@ find . -name "*.js" | xargs grep -l "HaruGreeter"
 可以找到以下两个
 
 ./dist/server/app/\(products\)/sentio/page.js
+
 ./dist/static/chunks/app/\(products\)/sentio/page-0b750d4e81e7fc5b.js
 
 直接进行编辑
