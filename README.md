@@ -76,3 +76,14 @@ vi ./dist/static/chunks/app/\(products\)/sentio/page-0b750d4e81e7fc5b.js
 快速定位
 /HaruGreeter  找到下面这里，修改为Kei即可
 /sc = "HaruGreeter"    sc = "Kei"
+
+## 4、语音输入框位置修正
+把docker容器awesome_digital_human-adh-web-1  中/workspace/dist/static/css/f8b2a301a9578d95.css文件拷贝到宿主机 /volume1/Download，方便我修改
+
+docker cp awesome_digital_human-adh-web-1:/workspace/dist/static/css/f8b2a301a9578d95.css /volume1/Download
+
+docker cp /volume1/Download/f8b2a301a9578d95.css awesome_digital_human-adh-web-1:/workspace/dist/static/css/
+
+vscode编辑器加到最后
+
+.flex.flex-col.full-height-minus-64px {height: calc(100dvh - 84px) !important;padding-bottom: 0 !important;}.flex.flex-col.w-4\/5\.md\:w-2\/3\.2xl\:w-1\/2.items-start.z-10{position:fixed!important;left:50%!important;bottom:0!important;transform:translateX(-50%)!important;width:80%!important;max-width:768px!important;z-index:100!important;margin:0!important}
