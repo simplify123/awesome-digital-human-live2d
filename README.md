@@ -12,13 +12,19 @@ Mixed Content: The page at 'https://100.64.0.7:8888/sentio ' was loaded over HTT
 那么解决方法如下：
 
 1、宿主机进入web容器中
+```abc
 docker exec -it awesome_digital_human-adh-web-1 /bin/sh
+```
 
 2、进入指定目录
+```abc
 cd /workspace/dist/static/chunks/app/(products)/sentio/
+```
 
 3、好习惯备份一下，防止翻车
+```abc
 cp ./page-0b750d4e81e7fc5b.js ./page-0b750d4e81e7fc5b.js.bak
+```
 
 4、把
 ```abc
@@ -44,3 +50,28 @@ docker commit awesome_digital_human-adh-web-1 registry.cn-hangzhou.aliyuncs.com/
 目的地协议：http
 目的地主机名：localhost
 目的地端口：8880
+
+## 3、如何修改启动时的默认角色
+进入web容器
+```abc
+docker exec -it awesome_digital_human-adh-web-1 /bin/sh
+```
+
+查找包含HaruGreeter的js文件
+```abc
+find . -name "*.js" | xargs grep -l "HaruGreeter"
+```
+
+可以找到以下两个
+
+./dist/server/app/\(products\)/sentio/page.js
+./dist/static/chunks/app/\(products\)/sentio/page-0b750d4e81e7fc5b.js
+
+直接进行编辑
+```abc
+vi ./dist/static/chunks/app/\(products\)/sentio/page-0b750d4e81e7fc5b.js
+```
+
+快速定位
+/HaruGreeter  找到下面这里，修改为Kei即可
+/sc = "HaruGreeter"    sc = "Kei"
